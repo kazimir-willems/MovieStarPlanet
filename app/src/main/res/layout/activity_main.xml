@@ -1,0 +1,890 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="luca.com.moviestartplanet.ui.MainActivity">
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/admob_view"
+        />
+
+    <LinearLayout
+        android:id="@+id/tab_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_above="@id/admob_view"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp"
+        android:background="@color/colorPrimaryDark">
+
+        <LinearLayout
+            android:id="@+id/home_layout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingBottom="4dp"
+            android:paddingTop="4dp"
+            android:layout_weight="1"
+            style="@style/ButtonDefault"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/iv_home"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@mipmap/ic_home"
+                android:layout_gravity="center_horizontal"/>
+            <TextView
+                android:id="@+id/tv_home"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tab_home"
+                android:layout_gravity="center_horizontal"
+                android:textColor="@color/colorWhite"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/share_layout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingBottom="4dp"
+            android:paddingTop="4dp"
+            android:layout_weight="1"
+            style="@style/ButtonDefault"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/iv_share"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@mipmap/ic_share"
+                android:layout_gravity="center_horizontal"/>
+            <TextView
+                android:id="@+id/tv_share"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tab_share"
+                android:layout_gravity="center_horizontal"
+                android:textColor="@color/colorWhite"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/favorite_layout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingBottom="4dp"
+            android:paddingTop="4dp"
+            android:layout_weight="1"
+            style="@style/ButtonDefault"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/iv_favorite"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@mipmap/ic_favorite"
+                android:layout_gravity="center_horizontal"/>
+            <TextView
+                android:id="@+id/tv_favorite"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tab_rate"
+                android:layout_gravity="center_horizontal"
+                android:textColor="@color/colorWhite"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/exit_layout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingBottom="4dp"
+            android:paddingTop="4dp"
+            android:layout_weight="1"
+            style="@style/ButtonDefault"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/iv_exit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@mipmap/ic_exit"
+                android:layout_gravity="center_horizontal"/>
+            <TextView
+                android:id="@+id/tv_exit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tab_exit"
+                android:layout_gravity="center_horizontal"
+                android:textColor="@color/colorWhite"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/splitter"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_above="@id/tab_layout"
+        android:background="@color/colorRed"></View>
+
+    <LinearLayout
+        android:id="@+id/main_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/splitter"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/colorRed"></View>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:paddingTop="6dp"
+            android:paddingBottom="6dp"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:text="@string/cheat_for_movie"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorPrimaryDark"></View>
+
+        <LinearLayout
+            android:id="@+id/first_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:paddingTop="14dp"
+                android:paddingBottom="14dp"
+                android:gravity="center_horizontal"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:text="@string/best_cheats_for_movie"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimaryDark"
+                android:textColor="@color/colorRed"
+                android:gravity="center_horizontal"
+                android:text="@string/easy_and_simple"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:paddingTop="4dp"
+                android:paddingBottom="4dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorRed"
+                android:gravity="center_horizontal"
+                android:text="@string/just_complete"
+                android:layout_gravity="center_horizontal"
+                android:drawableLeft="@mipmap/ic_double_down"
+                android:drawableRight="@mipmap/ic_double_down"
+                android:textSize="18sp"
+                android:paddingTop="4dp"
+                android:paddingBottom="4dp"/>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:src="@drawable/dotted"
+                android:layerType="software" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorPrimaryDark"
+                android:gravity="center_horizontal"
+                android:text="@string/welcome"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:paddingTop="4dp"
+                android:paddingBottom="4dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorPrimaryDark"
+                android:gravity="center_horizontal"
+                android:text="@string/first_connect"
+                android:layout_gravity="center_horizontal"
+                android:textSize="18sp"
+                android:paddingTop="4dp"
+                android:paddingBottom="4dp"/>
+
+            <Button
+                android:id="@+id/btn_connect"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:layout_marginTop="8dp"
+                style="@style/ButtonConnect"
+                android:textColor="@color/colorWhite"
+                android:text="@string/btn_connect"
+                android:drawableLeft="@mipmap/ic_user"/>
+        </LinearLayout>
+
+        <ScrollView
+            android:id="@+id/second_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="8dp"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:text="@string/app_connected"
+                    android:textSize="18sp"
+                    android:paddingBottom="5dp"
+                    android:singleLine="true"
+                    android:gravity="center_horizontal"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp">
+
+                    <com.akexorcist.roundcornerprogressbar.RoundCornerProgressBar
+                        android:id="@+id/progress_1"
+                        android:layout_height="32dp"
+                        android:layout_width="match_parent"
+                        app:rcBackgroundColor="#000000"
+                        app:rcSecondaryProgressColor="#CCCCCC"
+                        app:rcSecondaryProgress="100"
+                        app:rcBackgroundPadding="2dp"
+                        app:rcProgressColor="#FF0000"
+                        app:rcRadius="8dp"
+                        app:rcMax="100"
+                        app:rcProgress="100"/>
+
+                    <com.github.ybq.android.spinkit.SpinKitView
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/loading_1"
+                        style="@style/SpinKitView.Large.FadingCircle"
+                        android:layout_width="24dp"
+                        android:layout_height="16dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="8dp"
+                        android:visibility="gone"
+                        app:SpinKit_Color="#000000" />
+
+                    <ImageView
+                        android:id="@+id/ic_check1"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="8dp"
+                        android:visibility="visible"
+                        android:src="@mipmap/ic_check"/>
+
+                    <TextView
+                        android:id="@+id/tv_progress_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="8dp"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:text="100%"
+                        android:textSize="18sp"/>
+                </RelativeLayout>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:src="@drawable/dotted"
+                    android:layerType="software" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/app_connected"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textStyle="bold"
+                    android:gravity="center_horizontal"
+                    android:textSize="24sp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center_horizontal"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/select_resource"
+                    android:textSize="16sp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="@string/coin_amount"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="20sp"/>
+
+                <EditText
+                    android:id="@+id/spin_coin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/button_bg_spinner"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin"
+                    android:padding="4dp"
+                    android:text="25000"
+                    android:inputType="number"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:gravity="center_vertical"
+                    android:drawableRight="@mipmap/ic_down"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="@string/gems_amount"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="20sp"/>
+
+                <EditText
+                    android:id="@+id/spin_gem"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/button_bg_spinner"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin"
+                    android:padding="4dp"
+                    android:inputType="number"
+                    android:text="25000"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:gravity="center_vertical"
+                    android:drawableRight="@mipmap/ic_down"/>
+
+                <Button
+                    android:id="@+id/btn_continue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:paddingLeft="@dimen/activity_horizontal_margin"
+                    android:paddingRight="@dimen/activity_horizontal_margin"
+                    android:layout_marginTop="8dp"
+                    style="@style/ButtonConnect"
+                    android:textColor="@color/colorWhite"
+                    android:text="@string/btn_continue"
+                    android:drawableLeft="@mipmap/ic_continue"/>
+
+            </LinearLayout>
+        </ScrollView>
+        <LinearLayout
+            android:id="@+id/third_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="8dp"
+                android:textColor="@color/colorPrimaryDark"
+                android:text="@string/app_connected"
+                android:textSize="18sp"
+                android:paddingBottom="5dp"
+                android:singleLine="true"
+                android:gravity="center_horizontal"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp">
+
+                <com.akexorcist.roundcornerprogressbar.RoundCornerProgressBar
+                    android:id="@+id/progress_2"
+                    android:layout_height="32dp"
+                    android:layout_width="match_parent"
+                    app:rcBackgroundColor="#000000"
+                    app:rcSecondaryProgressColor="#CCCCCC"
+                    app:rcSecondaryProgress="100"
+                    app:rcBackgroundPadding="2dp"
+                    app:rcProgressColor="#FF0000"
+                    app:rcRadius="8dp"
+                    app:rcMax="100"
+                    app:rcProgress="100"/>
+
+                <com.github.ybq.android.spinkit.SpinKitView
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/loading_2"
+                    style="@style/SpinKitView.Large.FadingCircle"
+                    android:layout_width="24dp"
+                    android:layout_height="16dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="8dp"
+                    android:visibility="gone"
+                    app:SpinKit_Color="#000000" />
+
+                <ImageView
+                    android:id="@+id/ic_check2"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="8dp"
+                    android:visibility="visible"
+                    android:src="@mipmap/ic_check"/>
+
+                <TextView
+                    android:id="@+id/tv_progress_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="8dp"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:text="100%"
+                    android:textSize="18sp"/>
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:src="@drawable/dotted"
+                android:layerType="software" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/check_your_device"
+                android:gravity="center_horizontal"
+                android:textColor="@color/colorPrimaryDark"
+                android:textStyle="bold"
+                android:textSize="24sp"/>
+
+            <Button
+                android:id="@+id/btn_check"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:layout_marginTop="8dp"
+                style="@style/ButtonConnect"
+                android:textColor="@color/colorWhite"
+                android:text="@string/btn_check"
+                android:drawableLeft="@mipmap/ic_setting"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/fourth_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="8dp"
+                android:textColor="@color/colorPrimaryDark"
+                android:text="@string/device_configuration_checked"
+                android:textSize="18sp"
+                android:paddingBottom="5dp"
+                android:singleLine="true"
+                android:gravity="center_horizontal"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp">
+
+                <com.akexorcist.roundcornerprogressbar.RoundCornerProgressBar
+                    android:id="@+id/progress_3"
+                    android:layout_height="32dp"
+                    android:layout_width="match_parent"
+                    app:rcBackgroundColor="#000000"
+                    app:rcSecondaryProgressColor="#CCCCCC"
+                    app:rcSecondaryProgress="100"
+                    app:rcBackgroundPadding="2dp"
+                    app:rcProgressColor="#FF0000"
+                    app:rcRadius="8dp"
+                    app:rcMax="100"
+                    app:rcProgress="100"/>
+
+                <com.github.ybq.android.spinkit.SpinKitView
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/loading_3"
+                    style="@style/SpinKitView.Large.FadingCircle"
+                    android:layout_width="24dp"
+                    android:layout_height="16dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="8dp"
+                    android:visibility="gone"
+                    app:SpinKit_Color="#000000" />
+
+                <ImageView
+                    android:id="@+id/ic_check3"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="8dp"
+                    android:visibility="visible"
+                    android:src="@mipmap/ic_check"/>
+
+                <TextView
+                    android:id="@+id/tv_progress_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="8dp"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:text="100%"
+                    android:textSize="18sp"/>
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:src="@drawable/dotted"
+                android:layerType="software" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/device_configuration_checked"
+                android:gravity="center_horizontal"
+                android:textColor="@color/colorPrimaryDark"
+                android:textStyle="bold"
+                android:textSize="24sp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="16sp"
+                android:text="@string/now_check_app_version"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:gravity="center_horizontal"/>
+
+            <Button
+                android:id="@+id/btn_check_app_version"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:layout_marginTop="8dp"
+                style="@style/ButtonConnect"
+                android:textColor="@color/colorWhite"
+                android:text="@string/btn_check_app_version"
+                android:drawableLeft="@mipmap/ic_setting"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/fifth_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="8dp"
+                android:textColor="@color/colorPrimaryDark"
+                android:text="@string/movie_star_checked"
+                android:textSize="18sp"
+                android:paddingBottom="5dp"
+                android:singleLine="true"
+                android:gravity="center_horizontal"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp">
+
+                <com.akexorcist.roundcornerprogressbar.RoundCornerProgressBar
+                    android:id="@+id/progress_4"
+                    android:layout_height="32dp"
+                    android:layout_width="match_parent"
+                    app:rcBackgroundColor="#000000"
+                    app:rcSecondaryProgressColor="#CCCCCC"
+                    app:rcSecondaryProgress="100"
+                    app:rcBackgroundPadding="2dp"
+                    app:rcProgressColor="#FF0000"
+                    app:rcRadius="8dp"
+                    app:rcMax="100"
+                    app:rcProgress="100"/>
+
+                <com.github.ybq.android.spinkit.SpinKitView
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/loading_4"
+                    style="@style/SpinKitView.Large.FadingCircle"
+                    android:layout_width="24dp"
+                    android:layout_height="16dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="8dp"
+                    android:visibility="gone"
+                    app:SpinKit_Color="#000000" />
+
+                <ImageView
+                    android:id="@+id/ic_check4"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="8dp"
+                    android:visibility="visible"
+                    android:src="@mipmap/ic_check"/>
+
+                <TextView
+                    android:id="@+id/tv_progress_4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="8dp"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:text="100%"
+                    android:textSize="18sp"/>
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:src="@drawable/dotted"
+                android:layerType="software" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/movie_star_checked"
+                android:gravity="center_horizontal"
+                android:textColor="@color/colorPrimaryDark"
+                android:textStyle="bold"
+                android:textSize="24sp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="16sp"
+                android:text="@string/now_you_can_continue"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:gravity="center_horizontal"/>
+
+            <Button
+                android:id="@+id/btn_continue_last"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:layout_marginTop="8dp"
+                style="@style/ButtonConnect"
+                android:textColor="@color/colorWhite"
+                android:text="@string/btn_continue"
+                android:drawableLeft="@mipmap/ic_right"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/last_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="8dp"
+                android:textColor="@color/colorPrimaryDark"
+                android:text="@string/coins_and_gems_generated_top"
+                android:textSize="18sp"
+                android:paddingBottom="5dp"
+                android:maxLines="2"
+                android:gravity="center_horizontal"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp">
+
+                <com.akexorcist.roundcornerprogressbar.RoundCornerProgressBar
+                    android:id="@+id/progress_5"
+                    android:layout_height="32dp"
+                    android:layout_width="match_parent"
+                    app:rcBackgroundColor="#000000"
+                    app:rcSecondaryProgressColor="#CCCCCC"
+                    app:rcSecondaryProgress="100"
+                    app:rcBackgroundPadding="2dp"
+                    app:rcProgressColor="#FF0000"
+                    app:rcRadius="8dp"
+                    app:rcMax="100"
+                    app:rcProgress="100"/>
+
+                <com.github.ybq.android.spinkit.SpinKitView
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/loading_5"
+                    style="@style/SpinKitView.Large.FadingCircle"
+                    android:layout_width="24dp"
+                    android:layout_height="16dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="8dp"
+                    android:visibility="gone"
+                    app:SpinKit_Color="#000000" />
+
+                <ImageView
+                    android:id="@+id/ic_check5"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="8dp"
+                    android:visibility="visible"
+                    android:src="@mipmap/ic_check"/>
+
+                <TextView
+                    android:id="@+id/tv_progress_5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="8dp"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:text="100%"
+                    android:textSize="18sp"/>
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:src="@drawable/dotted"
+                android:layerType="software" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/coins_and_gems_generated_bottom"
+                android:gravity="center_horizontal"
+                android:textColor="@color/colorPrimaryDark"
+                android:textStyle="bold"
+                android:textSize="24sp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="16sp"
+                android:text="@string/notice"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:gravity="center_horizontal"/>
+
+            <Button
+                android:id="@+id/btn_rate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:layout_marginTop="8dp"
+                style="@style/ButtonConnect"
+                android:textColor="@color/colorWhite"
+                android:text="@string/btn_rate"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/no_internet_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:background="@drawable/dotted_bg">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="8dp"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:text="@string/alert"
+                    android:drawableLeft="@mipmap/ic_notification"
+                    android:layout_gravity="center_horizontal"
+                    android:textSize="18sp"
+                    android:paddingBottom="5dp"
+                    android:textStyle="bold"
+                    android:maxLines="2"
+                    android:gravity="center_horizontal"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="8dp"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:text="@string/alert_notice"
+                    android:layout_gravity="center_horizontal"
+                    android:textSize="18sp"
+                    android:paddingBottom="5dp"
+                    android:gravity="center_horizontal"/>
+
+                <Button
+                    android:id="@+id/btn_try_again"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:paddingLeft="@dimen/activity_horizontal_margin"
+                    android:paddingRight="@dimen/activity_horizontal_margin"
+                    android:layout_marginTop="8dp"
+                    style="@style/ButtonConnect"
+                    android:drawableLeft="@mipmap/ic_refresh"
+                    android:textColor="@color/colorWhite"
+                    android:text="@string/btn_try_again"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

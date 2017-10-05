@@ -1,0 +1,38 @@
+<resources>
+    <string name="app_name">MovieStartPlanet</string>
+    <string name="tab_home">HOME</string>
+    <string name="tab_share">SHARE</string>
+    <string name="tab_rate">RATE</string>
+    <string name="tab_exit">EXIT</string>
+    <string name="cheat_for_movie">Cheats For MovieStarPlanet</string>
+    <string name="best_cheats_for_movie">Best Cheats For MovieStarPlanet</string>
+    <string name="easy_and_simple">EASY AND SIMPLE TO USE</string>
+    <string name="just_complete">Just Complete Steps Below</string>
+    <string name="welcome">WELCOME</string>
+    <string name="first_connect">Firstly, Connect to MovieStarPlanet.</string>
+    <string name="btn_connect">Connect</string>
+    <string name="app_connected">App connected to\nMovieStarPlanet</string>
+    <string name="select_resource">Select how many resources you want to\ngenerate.</string>
+    <string name="coin_amount">Coins amount:</string>
+    <string name="gems_amount">Gems amount:</string>
+    <string name="btn_continue">Continue</string>
+    <string name="check_your_device">Please, Check your device\nconfiguration.</string>
+    <string name="btn_check">Check Your Device</string>
+    <string name="device_configuration_checked">DEVICE CONFIGURATION\nCHECKED</string>
+    <string name="now_check_app_version">NOW, Check MovieStarPlanet App Version.</string>
+    <string name="btn_check_app_version">Check MovieStarPlanet App Version</string>
+    <string name="movie_star_checked">MovieStarPlanet App Version\nCHECKED</string>
+    <string name="now_you_can_continue">Now, you can continue and get selected Coins\nand Gems on MovieStarPlanet</string>
+    <string name="coins_and_gems_generated_top">Coins and Gems SUCCESSFULLY GENERATED\non MovieStarPlanet</string>
+    <string name="coins_and_gems_generated_bottom">Coins and Gems\nSUCCESSFULLY GENERATED\non MovieStarPlanet</string>
+    <string name="notice">You will find all generated Coins and Gems on MovieStarPlanet after maximum <b>4 hours</b>, Please check you MovieStarPlanet APP, If you didn\'t find it please retry again.\nDon\'t forget to rate app on Play Store and write us your device model to help us to develop this app.</string>
+    <string name="btn_rate">Rate APP</string>
+    <string name="btn_ok">OK</string>
+    <string name="btn_cancel">CANCEL</string>
+    <string name="confirm">Confirm</string>
+    <string name="sure_to_quit">Are you sure to quit?</string>
+    <string name="share_content">Hi,\nYou can generate unlimited Coins and Gems on MovieStarPlanet with the best 2017 android App\n\nhttps://play.google.com/store/apps/details?id=hungarandroapplis.cheatsjokeandprank.funappformvistrplntprank</string>
+    <string name="btn_try_again">Try Again</string>
+    <string name="alert">ALERT</string>
+    <string name="alert_notice">Alert! Your device is not connected\nto the Internet, connect your device\nto the Internet, and click on</string>
+</resources>
